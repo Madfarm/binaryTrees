@@ -11,5 +11,11 @@ a collection of nodes and edges(connections between nodes)
 - File structures
 - Calculator's order of operations
 - Top 8 bracket
-- Reddit
+- Reddit threads
 
+## The Nitty Gritty
+- each Node has at most two branches(except the root)
+- each non-root node will have 3 properties:
+    1. value - the data
+    2. left - node with lesser value, nullable
+    3. right - node with greater value, nullable
