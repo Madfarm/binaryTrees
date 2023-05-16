@@ -1,14 +1,65 @@
-class TreeNode<data> {
-    value: data;
-    left?: TreeNode<data>;
-    right?: TreeNode<data>;
+class TreeNode {
+    value: number;
+    left: TreeNode | null;
+    right: TreeNode | null;
 
-    constructor(data: data){
+    constructor(data: number){
         this.value =  data;
+        this.left = null;
+        this.right = null;
     }
 
 }
 
-const myNode: TreeNode<number> = new TreeNode(5);
+class BinaryTree {
+    root: TreeNode | null;
 
-console.log(myNode.value)
+    constructor(){
+        this.root = null;
+    }
+
+    insert(data: number): void{
+        let newNode: TreeNode = new TreeNode(data);
+        
+        if (!this.root){
+            this.root = newNode;
+            return
+        }
+
+        let pointer: null | TreeNode = this.root;
+
+        while(pointer){
+            if (data == pointer.value) return
+
+            if (data < pointer.value){
+                if (pointer.left == null){
+                    pointer.left =  newNode;
+                    return
+                }
+
+                pointer = pointer.left
+            } else {
+                if (pointer.right == null){
+                    pointer.right = newNode
+                    return
+                }
+
+                pointer = pointer.right
+            }
+        }
+
+    }
+}
+
+
+const myTree: BinaryTree = new BinaryTree()
+myTree.root = new TreeNode(5);
+myTree.insert(2);
+myTree.insert(3);
+myTree.insert(7);
+myTree.insert(6);
+
+
+
+console.log(myTree)
+
