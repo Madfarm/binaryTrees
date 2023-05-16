@@ -19,3 +19,15 @@ a collection of nodes and edges(connections between nodes)
     1. value - the data
     2. left - node with lesser value, nullable
     3. right - node with greater value, nullable
+
+
+## Depth-First Search
+Start at root and go to each leaf
+recursive
+better if your value is towards the bottom and on very wide trees
+
+## Breadth-First Search
+Start at root and check all children
+iterative
+better if your value is towards the top and your tree is very deep
+find the shortest path to another node
