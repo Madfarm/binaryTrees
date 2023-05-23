@@ -26,8 +26,25 @@ Start at root and go to each leaf
 recursive
 better if your value is towards the bottom and on very wide trees
 
+
+3 kinds based on the order of nodes visited
+preorder - node       => node.left  => node.right
+inorder - node.left   => node       => node.right
+postorder - node.left => node.right => node
+
+
+## Height
+max length of a path in the tree
+
+
 ## Breadth-First Search
 Start at root and check all children
 iterative
 better if your value is towards the top and your tree is very deep
 find the shortest path to another node
+
+
+calculate the height of the whole tree
+then iterate from 1 to that height, printing the nodes at that height
+
+
