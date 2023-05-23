@@ -64,7 +64,6 @@ class BinarySearchTree {
         let rightHeight = this.height(node.right);
 
 
-
         if (leftHeight > rightHeight) return (leftHeight + 1)
         else return (rightHeight + 1)
 

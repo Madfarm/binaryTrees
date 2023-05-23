@@ -32,6 +32,9 @@ preorder - node       => node.left  => node.right
 inorder - node.left   => node       => node.right
 postorder - node.left => node.right => node
 
+can be implemented with a stack
+O(N)
+
 
 ## Height
 max length of a path in the tree
@@ -47,4 +50,7 @@ find the shortest path to another node
 calculate the height of the whole tree
 then iterate from 1 to that height, printing the nodes at that height
 
+
+can be implemented with a queue
+O(N)
 
